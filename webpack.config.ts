@@ -4,7 +4,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 const config: Configuration = {
     entry: {
-        content_scripts: path.join(__dirname, 'src', 'content_scripts.ts')
+        content_scripts: path.join(__dirname, 'src', 'content_scripts.ts'),
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -30,7 +30,13 @@ const config: Configuration = {
                 ]
             }
         )
-    ]
+    ],
+    externals: {
+        // require("jquery") is external and available
+        //  on the global var jQuery
+        "jquery": "jQuery",
+    },
+    devtool: 'inline-source-map'
 }
 
 export default config

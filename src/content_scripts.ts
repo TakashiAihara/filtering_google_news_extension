@@ -1,8 +1,7 @@
 import { browser } from 'webextension-polyfill-ts'
-import $ from 'jquery'
 
 const execute = async () => {
-    $(".test")
+    console.log("test");
     const value = await browser.storage.local.get('date')
     console.log(value.date || '日時が記録されていません')
 

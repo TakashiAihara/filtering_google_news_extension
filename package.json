@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "jQuery": "^1.7.4",
+    "webextension-polyfill-ts": "^0.25.0"
+  },
+  "devDependencies": {
+    "@types/copy-webpack-plugin": "^8.0.0",
+    "@types/jquery": "^3.5.5",
+    "@types/webpack": "^5.28.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "ts-loader": "^9.2.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "name": "google_news_extension",
+  "version": "1.0.0",
+  "main": "content_scripts.ts",
+  "repository": "ssh://git@github.com/TakashiAihara/google_news_extension.git",
+  "author": "takashi.aihara.0523@gmail.com",
+  "license": "MIT"
+}

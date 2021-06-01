@@ -19,5 +19,9 @@
   "main": "content_scripts.ts",
   "repository": "ssh://git@github.com/TakashiAihara/google_news_extension.git",
   "author": "takashi.aihara.0523@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  }
 }

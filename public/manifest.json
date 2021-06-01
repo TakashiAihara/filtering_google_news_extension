@@ -1,5 +1,5 @@
 {
-    "name": "名前",
+    "name": "Advanced Google News",
     "manifest_version": 2,
     "version": "1.0",
     "browser_action": {

@@ -1,14 +1,15 @@
 {
-    "name": "Advanced Google News",
+    "name": "Filtering Google News",
     "manifest_version": 2,
-    "version": "1.0",
+    "version": "1.0.0",
+    "description": "Google newsで既読記事を消します。",
     "browser_action": {
-        "default_icon": "icon_32.png"
+        "default_icon": "filtering_news_icon.png"
     },
     "content_scripts": [
         {
             "matches": [
-                "https://www.google.com/"
+                "https://news.google.com/*"
             ],
             "js": [
                 "content_scripts.js"

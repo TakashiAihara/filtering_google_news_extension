@@ -125,3 +125,4 @@ tmp/
 temp/
 
 *.zip
+.DS_Store

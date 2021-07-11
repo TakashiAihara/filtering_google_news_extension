@@ -1,35 +1,34 @@
 @startuml Front Architecture
 
-abstract class Article{}
-
-class SimpleArticle{}
-Article <|-- SimpleArticle
-
-class ChildArticle{}
-Article <|-- ChildArticle
-
-class ArticleCollection{}
-ArticleCollection "1" o-- "0..*" Article
+' Page
 
 class Page{}
+Page "1" o-- "0..*" Chunk : "List"
 
+' Chunks
 
-abstract class Chunk{}
-Chunk "1" o- "0..1" ArticleCollection
+abstract class Chunk{
+	+ baseDiv
+}
+Chunk <|-- SingleArticleChunk
+Chunk <|-- CategorizedArticlesChunk
+Chunk <|-- HasChildArticlesChunk
+Chunk "1" o- "0..*" Article : "List"
 
 class SingleArticleChunk {}
-Chunk <|-- SingleArticleChunk
-
 class CategorizedArticlesChunk {}
-Chunk <|-- CategorizedArticlesChunk
-
 class HasChildArticlesChunk {}
-Chunk <|-- HasChildArticlesChunk
-
-class ChunkCollection{}
-Page "1" o-- "0..1" ChunkCollection
-ChunkCollection "1" o-- "0..*" Chunk
 
 class ChunkFactory {}
+
+' Articles
+
+abstract class Article{}
+Article <|-- SimpleArticle
+Article <|-- ChildArticle
+
+class SimpleArticle{}
+
+class ChildArticle{}
 
 @enduml
